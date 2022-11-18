@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+<body>
+    <!-- data binding -->
+    <div>
+        <h2>Please Enter Your Name</h2>
+        <input type="text" ng-model="nameControl">
+
+        <h3>Hi {{nameControl|lowercase}} !</h3>
+        <p ng-bind="nameControl"></p>
+    </div>
+    
+    <hr>
+    <!-- number -->
+    <div ng-app ng-init="value1=10; value2=15;">
+        <p>The total of value 1 and value 2: {{value1 + value2}}</p>
+    </div>
+
+    <hr>
+    <!-- string -->
+    <div ng-app ng-init="Course='BSIT'; YearLevel='3rd Year';">
+        <p>Course Information: {{Course + "." + YearLevel}}</p>
+    </div>
+
+    <hr>
+
+    <!-- filter -->
+    <div ng-app>
+        <label>Value 1:</label>
+        <input type="number" ng-model="val1">
+        <label>Value 2:</label>
+        <input type="number" ng-model="val2">
+        <p>Total is: {{val1 +val2 | currency:"Php "}}</p>
+    </div>
+
+
+</body>
+</html>
